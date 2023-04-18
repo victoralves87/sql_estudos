@@ -1,0 +1,31 @@
+--create database pedido;
+--use pedido
+
+
+--create table cliente 
+--(cd_cliente integer identity(1000,1) primary key,
+--nm_cleinte varchar(50) not null,)
+
+--create table pedido
+--(nr_pedido integer identity primary key,
+--dt_pedido date not null,
+--cd_cliente integer not null REFERENCES cliente(cd_cliente))
+
+--create table produto
+--(cd_produto integer identity primary key,
+--ds_produto varchar(50) not null,
+--preco decimal(5,2) not null)
+
+--create table pedidoProduto
+--(nr_pedido integer not null REFERENCES pedido(nr_pedido) ,
+--cd_produto integer not null REFERENCES produto(cd_produto),
+--quantidade integer not null,
+--preco decimal(5,2) not null,
+--primary key(nr_pedido,cd_produto))
+
+
+
+select * from pedido
+select * from cliente
+select * from produto
+select * from pedidoProduto
