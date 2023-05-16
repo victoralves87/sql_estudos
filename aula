@@ -15,3 +15,20 @@
 --close cursor1
 
 --deallocate cursor1
+
+
+
+
+
+declare @nome char(40), @funcao varchar(20)
+declare cursor1 cursor
+	for select nome,funcao from cadfun
+open cursor1
+	fetch next from cursor1 into @nome, @funcao
+while @@FETCH_STATUS = 0
+	begin
+	print @nome + '-' + @funcao
+	fetch next from cursor1 into @nome, @funcao
+	end
+close cursor1
+deallocate cursor1
