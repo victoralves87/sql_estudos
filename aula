@@ -1,0 +1,17 @@
+--use Exercicios
+
+
+--declare cursor1 scroll cursor 
+--	for select nome, funcao from cadfun
+
+--open cursor1 
+--	select nome, funcao from cadfun 
+--	fetch first from cursor1
+--	fetch absolute 2 from cursor1
+--	fetch relative 5 from cursor1
+--	fetch relative -2 from cursor1
+--	fetch prior from cursor1
+
+--close cursor1
+
+--deallocate cursor1
